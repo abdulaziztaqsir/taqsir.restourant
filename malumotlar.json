@@ -15,8 +15,581 @@
         {
             "ism": "2",
             "telefon": "1"
+        },
+        {
+            "ism": "Azzamjonov Azimjon",
+            "telefon": "+998777777777"
+        },
+        {
+            "ism": "Azzamjonov Azimjon",
+            "telefon": "import json"
+        },
+        {
+            "ism": "Azzamjonov Azimjon",
+            "telefon": "+998 94 480 49 00"
+        },
+        {
+            "ism": "abdul",
+            "telefon": "37777777"
+        },
+        {
+            "ism": "taqsir",
+            "telefon": "946791309"
+        },
+        {
+            "ism": "Ali",
+            "telefon": "+998901234567"
+        },
+        {
+            "ism": "Ali",
+            "telefon": "+998901234567"
+        },
+        {
+            "ism": "Ali",
+            "telefon": "+998901234567"
+        },
+        {
+            "ism": "Ali",
+            "telefon": "+998901234567"
+        },
+        {
+            "ism": "Ali",
+            "telefon": "+998901234567"
+        },
+        {
+            "ism": "Ali",
+            "telefon": "+998901234567"
+        },
+        {
+            "ism": "Azimjon",
+            "telefon": "+998 94 480 49 00"
+        },
+        {
+            "ism": "Ali",
+            "telefon": "+998901234567"
+        },
+        {
+            "ism": "Azimjon",
+            "telefon": "+998 94 480 49 00"
+        },
+        {
+            "ism": "Ali",
+            "telefon": "+998901234567"
+        },
+        {
+            "ism": "Azimjon",
+            "telefon": "+998 94 480 49 00"
+        },
+        {
+            "ism": "Ali",
+            "telefon": "+998901234567"
+        },
+        {
+            "ism": "Azimjon",
+            "telefon": "+998 94 480 49 00"
+        },
+        {
+            "ism": "Ali",
+            "telefon": "+998901234567"
+        },
+        {
+            "ism": "Azimjon",
+            "telefon": "+998 94 480 49 00"
+        },
+        {
+            "ism": "Ali",
+            "telefon": "+998901234567"
+        },
+        {
+            "ism": "Azimjon",
+            "telefon": "+998 94 480 49 00"
+        },
+        {
+            "ism": "Ali",
+            "telefon": "+998901234567"
+        },
+        {
+            "ism": "Azimjon",
+            "telefon": "+998 94 480 49 00"
+        },
+        {
+            "ism": "Azimjon",
+            "telefon": "+998 94 480 49 00"
+        },
+        {
+            "ism": "Azimjon",
+            "telefon": "+998 94 480 49 00"
+        },
+        {
+            "ism": "Azimjon",
+            "telefon": "+998 94 480 49 00"
+        },
+        {
+            "ism": "Azimjon",
+            "telefon": "+998 94 480 49 00"
+        },
+        {
+            "ism": "Azimjon",
+            "telefon": "+998 94 480 49 00"
         }
     ],
-    "buyurtmalar": [],
-    "menyu": []
+    "buyurtmalar": [
+        {
+            "mijoz": "Ali",
+            "taomlar": [
+                "Osh",
+                "Shashlik"
+            ]
+        }
+    ],
+    "menyu": [
+        {
+            "nomi": "ggg",
+            "narxi": 56.0
+        },
+        {
+            "nomi": "Osh",
+            "narxi": 50000
+        },
+        {
+            "nomi": "Shashlik",
+            "narxi": 30000
+        },
+        {
+            "nomi": "Osh",
+            "narxi": 50.0
+        },
+        {
+            "nomi": "Shashlik",
+            "narxi": 30.0
+        },
+        {
+            "nomi": "lagmon",
+            "narxi": 35.0
+        },
+        {
+            "nomi": "norin",
+            "narxi": 25.0
+        },
+        {
+            "nomi": "Chuchvara",
+            "narxi": 25.0
+        },
+        {
+            "nomi": "Dimlama",
+            "narxi": 45.0
+        },
+        {
+            "nomi": "Qovurma lag'mon",
+            "narxi": 40.0
+        },
+        {
+            "nomi": "Kuksi",
+            "narxi": 20.0
+        },
+        {
+            "nomi": "Somsa",
+            "narxi": 7.0
+        },
+        {
+            "nomi": "Osh",
+            "narxi": 50.0
+        },
+        {
+            "nomi": "Shashlik",
+            "narxi": 30.0
+        },
+        {
+            "nomi": "lagmon",
+            "narxi": 35.0
+        },
+        {
+            "nomi": "norin",
+            "narxi": 25.0
+        },
+        {
+            "nomi": "Chuchvara",
+            "narxi": 25.0
+        },
+        {
+            "nomi": "Dimlama",
+            "narxi": 45.0
+        },
+        {
+            "nomi": "Qovurma lag'mon",
+            "narxi": 40.0
+        },
+        {
+            "nomi": "Kuksi",
+            "narxi": 20.0
+        },
+        {
+            "nomi": "Somsa",
+            "narxi": 7.0
+        },
+        {
+            "nomi": "Osh",
+            "narxi": 50.0
+        },
+        {
+            "nomi": "Shashlik",
+            "narxi": 30.0
+        },
+        {
+            "nomi": "lagmon",
+            "narxi": 35.0
+        },
+        {
+            "nomi": "norin",
+            "narxi": 25.0
+        },
+        {
+            "nomi": "Chuchvara",
+            "narxi": 25.0
+        },
+        {
+            "nomi": "Dimlama",
+            "narxi": 45.0
+        },
+        {
+            "nomi": "Qovurma lag'mon",
+            "narxi": 40.0
+        },
+        {
+            "nomi": "Kuksi",
+            "narxi": 20.0
+        },
+        {
+            "nomi": "Somsa",
+            "narxi": 7.0
+        },
+        {
+            "nomi": "Osh",
+            "narxi": 50.0
+        },
+        {
+            "nomi": "Shashlik",
+            "narxi": 30.0
+        },
+        {
+            "nomi": "lagmon",
+            "narxi": 35.0
+        },
+        {
+            "nomi": "norin",
+            "narxi": 25.0
+        },
+        {
+            "nomi": "Chuchvara",
+            "narxi": 25.0
+        },
+        {
+            "nomi": "Dimlama",
+            "narxi": 45.0
+        },
+        {
+            "nomi": "Qovurma lag'mon",
+            "narxi": 40.0
+        },
+        {
+            "nomi": "Kuksi",
+            "narxi": 20.0
+        },
+        {
+            "nomi": "Somsa",
+            "narxi": 7.0
+        },
+        {
+            "nomi": "Osh",
+            "narxi": 50.0
+        },
+        {
+            "nomi": "Shashlik",
+            "narxi": 30.0
+        },
+        {
+            "nomi": "lagmon",
+            "narxi": 35.0
+        },
+        {
+            "nomi": "norin",
+            "narxi": 25.0
+        },
+        {
+            "nomi": "Chuchvara",
+            "narxi": 25.0
+        },
+        {
+            "nomi": "Dimlama",
+            "narxi": 45.0
+        },
+        {
+            "nomi": "Qovurma lag'mon",
+            "narxi": 40.0
+        },
+        {
+            "nomi": "Kuksi",
+            "narxi": 20.0
+        },
+        {
+            "nomi": "Somsa",
+            "narxi": 7.0
+        },
+        {
+            "nomi": "Osh",
+            "narxi": 50.0
+        },
+        {
+            "nomi": "Shashlik",
+            "narxi": 30.0
+        },
+        {
+            "nomi": "lagmon",
+            "narxi": 35.0
+        },
+        {
+            "nomi": "norin",
+            "narxi": 25.0
+        },
+        {
+            "nomi": "Chuchvara",
+            "narxi": 25.0
+        },
+        {
+            "nomi": "Dimlama",
+            "narxi": 45.0
+        },
+        {
+            "nomi": "Qovurma lag'mon",
+            "narxi": 40.0
+        },
+        {
+            "nomi": "Kuksi",
+            "narxi": 20.0
+        },
+        {
+            "nomi": "Somsa",
+            "narxi": 7.0
+        },
+        {
+            "nomi": "Osh",
+            "narxi": 50.0
+        },
+        {
+            "nomi": "Shashlik",
+            "narxi": 30.0
+        },
+        {
+            "nomi": "lagmon",
+            "narxi": 35.0
+        },
+        {
+            "nomi": "norin",
+            "narxi": 25.0
+        },
+        {
+            "nomi": "Chuchvara",
+            "narxi": 25.0
+        },
+        {
+            "nomi": "Dimlama",
+            "narxi": 45.0
+        },
+        {
+            "nomi": "Qovurma lag'mon",
+            "narxi": 40.0
+        },
+        {
+            "nomi": "Kuksi",
+            "narxi": 20.0
+        },
+        {
+            "nomi": "Somsa",
+            "narxi": 7.0
+        },
+        {
+            "nomi": "Osh",
+            "narxi": 50.0
+        },
+        {
+            "nomi": "Shashlik",
+            "narxi": 30.0
+        },
+        {
+            "nomi": "lagmon",
+            "narxi": 35.0
+        },
+        {
+            "nomi": "norin",
+            "narxi": 25.0
+        },
+        {
+            "nomi": "Chuchvara",
+            "narxi": 25.0
+        },
+        {
+            "nomi": "Dimlama",
+            "narxi": 45.0
+        },
+        {
+            "nomi": "Qovurma lag'mon",
+            "narxi": 40.0
+        },
+        {
+            "nomi": "Kuksi",
+            "narxi": 20.0
+        },
+        {
+            "nomi": "Somsa",
+            "narxi": 7.0
+        },
+        {
+            "nomi": "Osh",
+            "narxi": 50.0
+        },
+        {
+            "nomi": "Shashlik",
+            "narxi": 30.0
+        },
+        {
+            "nomi": "lagmon",
+            "narxi": 35.0
+        },
+        {
+            "nomi": "norin",
+            "narxi": 25.0
+        },
+        {
+            "nomi": "Chuchvara",
+            "narxi": 25.0
+        },
+        {
+            "nomi": "Dimlama",
+            "narxi": 45.0
+        },
+        {
+            "nomi": "Qovurma lag'mon",
+            "narxi": 40.0
+        },
+        {
+            "nomi": "Kuksi",
+            "narxi": 20.0
+        },
+        {
+            "nomi": "Somsa",
+            "narxi": 7.0
+        },
+        {
+            "nomi": "Osh",
+            "narxi": 50.0
+        },
+        {
+            "nomi": "Shashlik",
+            "narxi": 30.0
+        },
+        {
+            "nomi": "lagmon",
+            "narxi": 35.0
+        },
+        {
+            "nomi": "norin",
+            "narxi": 25.0
+        },
+        {
+            "nomi": "Chuchvara",
+            "narxi": 25.0
+        },
+        {
+            "nomi": "Dimlama",
+            "narxi": 45.0
+        },
+        {
+            "nomi": "Qovurma lag'mon",
+            "narxi": 40.0
+        },
+        {
+            "nomi": "Kuksi",
+            "narxi": 20.0
+        },
+        {
+            "nomi": "Somsa",
+            "narxi": 7.0
+        },
+        {
+            "nomi": "Osh",
+            "narxi": 50.0
+        },
+        {
+            "nomi": "Shashlik",
+            "narxi": 30.0
+        },
+        {
+            "nomi": "lagmon",
+            "narxi": 35.0
+        },
+        {
+            "nomi": "norin",
+            "narxi": 25.0
+        },
+        {
+            "nomi": "Chuchvara",
+            "narxi": 25.0
+        },
+        {
+            "nomi": "Dimlama",
+            "narxi": 45.0
+        },
+        {
+            "nomi": "Qovurma lag'mon",
+            "narxi": 40.0
+        },
+        {
+            "nomi": "Kuksi",
+            "narxi": 20.0
+        },
+        {
+            "nomi": "Somsa",
+            "narxi": 7.0
+        },
+        {
+            "nomi": "Osh",
+            "narxi": 50.0
+        },
+        {
+            "nomi": "Shashlik",
+            "narxi": 30.0
+        },
+        {
+            "nomi": "Osh",
+            "narxi": 50.0
+        },
+        {
+            "nomi": "Shashlik",
+            "narxi": 30.0
+        },
+        {
+            "nomi": "Osh",
+            "narxi": 50.0
+        },
+        {
+            "nomi": "Shashlik",
+            "narxi": 30.0
+        },
+        {
+            "nomi": "Osh",
+            "narxi": 50.0
+        },
+        {
+            "nomi": "Shashlik",
+            "narxi": 30.0
+        },
+        {
+            "nomi": "Osh",
+            "narxi": 50.0
+        },
+        {
+            "nomi": "Shashlik",
+            "narxi": 30.0
+        }
+    ]
 }

@@ -2,7 +2,6 @@ import json
 from abc import ABC, abstractmethod
 
 
-# Ma'lumotlarni JSON faylda saqlash va yuklash
 class MalumotlarBoshqaruvchisi:
     FAYL_NOMI = "malumotlar.json"
 
@@ -12,7 +11,7 @@ class MalumotlarBoshqaruvchisi:
             with open(MalumotlarBoshqaruvchisi.FAYL_NOMI, "r") as fayl:
                 return json.load(fayl)
         except (FileNotFoundError, json.JSONDecodeError):
-            return {"mijozlar": [], "buyurtmalar": [], "menyu": []}
+            return {"mijozlar": [], "buyurtmalar": [], "menyu": [], "xodimlar": [], "parkofka": []}
 
     @staticmethod
     def saqlash(malumotlar):
@@ -20,14 +19,12 @@ class MalumotlarBoshqaruvchisi:
             json.dump(malumotlar, fayl, indent=4)
 
 
-# Abstraksiya - Restoran Entity
 class RestoranEntity(ABC):
     @abstractmethod
     def malumot_korsat(self):
         pass
 
 
-# Mijoz Class
 class Mijoz(RestoranEntity):
     def __init__(self, ism, telefon):
         self.ism = ism
@@ -37,7 +34,6 @@ class Mijoz(RestoranEntity):
         return f"Mijoz: {self.ism}, Telefon: {self.telefon}"
 
 
-# Menyu Elementi Class
 class MenyuElementi(RestoranEntity):
     def __init__(self, nomi, narxi):
         self.nomi = nomi
@@ -47,7 +43,6 @@ class MenyuElementi(RestoranEntity):
         return f"Menyu: {self.nomi}, Narxi: ${self.narxi}"
 
 
-# Buyurtma Class (Polimorfizm - turli malumot_korsat implementatsiyasi)
 class Buyurtma(RestoranEntity):
     def __init__(self, mijoz, taomlar):
         self.mijoz = mijoz
@@ -58,13 +53,44 @@ class Buyurtma(RestoranEntity):
         return f"Buyurtma: {self.mijoz.ism}, Taomlar: {', '.join(taom.nomi for taom in self.taomlar)} | Jami: ${self.jami_narx}"
 
 
-# CRM Tizimi (Inkapsulatsiya & Meros)
+class Xodim(RestoranEntity):
+    def __init__(self, ism, lavozim):
+        self.ism = ism
+        self.lavozim = lavozim
+
+    def malumot_korsat(self):
+        return f"Xodim: {self.ism}, Lavozim: {self.lavozim}"
+
+
+class RestoranParkofkasi:
+    def __init__(self):
+        self.parkofka = []
+
+    def mashina_qosh(self, raqam):
+        self.parkofka.append(raqam)
+        print("Mashina parkofkaga qo'shildi!")
+
+    def mashinalarni_korsat(self):
+        print("Parkofkada turgan mashinalar:", ", ".join(self.parkofka))
+
+
+class Hisobot:
+    @staticmethod
+    def kunlik_hisobot(buyurtmalar):
+        jami_summa = sum(b.jami_narx for b in buyurtmalar)
+        print(f"Kunlik tushum: ${jami_summa}")
+        print(f"Jami buyurtmalar soni: {len(buyurtmalar)}")
+
+
 class CRM:
     def __init__(self):
         self.malumotlar = MalumotlarBoshqaruvchisi.yuklash()
-        self.mijozlar = [Mijoz(m["ism"], m["telefon"]) for m in self.malumotlar["mijozlar"]]
-        self.menyu = [MenyuElementi(m["nomi"], m["narxi"]) for m in self.malumotlar["menyu"]]
-        self.buyurtmalar = []
+        self.malumotlar["buyurtmalar"] = []  # Eski buyurtmalarni tozalash
+        self.mijozlar = [Mijoz(m["ism"], m["telefon"]) for m in self.malumotlar.get("mijozlar", [])]
+        self.menyu = [MenyuElementi(m["nomi"], m["narxi"]) for m in self.malumotlar.get("menyu", [])]
+        self.buyurtmalar = []  # Toza buyurtmalar ro'yxati
+        self.xodimlar = [Xodim(x["ism"], x["lavozim"]) for x in self.malumotlar.get("xodimlar", [])]
+        self.parkofka = RestoranParkofkasi()
 
     def mijoz_qosh(self, ism, telefon):
         mijoz = Mijoz(ism, telefon)
@@ -93,50 +119,28 @@ class CRM:
 
         buyurtma = Buyurtma(mijoz, taomlar)
         self.buyurtmalar.append(buyurtma)
+        self.malumotlar["buyurtmalar"].append({"mijoz": mijoz.ism, "taomlar": taom_nomi})
+        MalumotlarBoshqaruvchisi.saqlash(self.malumotlar)
         print("Buyurtma muvaffaqiyatli berildi!")
         print(buyurtma.malumot_korsat())
 
-    def mijozlar_korsat(self):
-        for mijoz in self.mijozlar:
-            print(mijoz.malumot_korsat())
 
-    def menyuni_korsat(self):
-        for taom in self.menyu:
-            print(taom.malumot_korsat())
-
-
-# Konsol Ilovasi
 if __name__ == "__main__":
     crm = CRM()
-    while True:
-        print("\n---Taqsir.restourant---")
-        print("\n1. Mijoz qo'shish")
-        print("2. Menyuga taom qo'shish")
-        print("3. Buyurtma berish")
-        print("4. Mijozlarni ko'rish")
-        print("5. Menyuni ko'rish")
-        print("6. Chiqish")
-        tanlov = input("Tanlang: ").strip()
 
-        print(f"Tanlangan qiymat: '{tanlov}'")  # Diagnostika uchun
+    # Parkofka
+    crm.parkofka.mashina_qosh("01.001.RRR")
+    crm.parkofka.mashinalarni_korsat()
 
-        if tanlov == "1":
-            ism = input("Mijoz ismini kiriting: ")
-            telefon = input("Telefon raqamini kiriting: ")
-            crm.mijoz_qosh(ism, telefon)
-        elif tanlov == "2":
-            nomi = input("Taom nomini kiriting: ")
-            narxi = float(input("Narxini kiriting: "))
-            crm.menyuga_qosh(nomi, narxi)
-        elif tanlov == "3":
-            ism = input("Mijoz ismini kiriting: ")
-            taomlar = input("Buyurtma taomlarini kiriting (vergul bilan ajrating): ").split(",")
-            crm.buyurtma_ber(ism, [t.strip() for t in taomlar])
-        elif tanlov == "4":
-            crm.mijozlar_korsat()
-        elif tanlov == "5":
-            crm.menyuni_korsat()
-        elif tanlov == "6":
-            break
-        else:
-            print("Noto'g'ri tanlov, qayta urinib ko'ring!")
+    # Mijoz
+    crm.mijoz_qosh("Azimjon", "+998 94 480 49 00")
+
+    # Menyuga Taomlar qoshish
+    crm.menyuga_qosh("Osh", 50.0)
+    crm.menyuga_qosh("Shashlik", 30.0)
+
+    # Buyurtma qilish
+    crm.buyurtma_ber("Ali", ["Osh", "Shashlik"])
+
+    # Kunlik hisobot
+    Hisobot.kunlik_hisobot(crm.buyurtmalar)
